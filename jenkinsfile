@@ -64,20 +64,7 @@ pipeline {
                 }
             }
         }
-        stage('monitor') {
-            steps {
-                script {
-                    withCredentials([sshUserPrivateKey(credentialsId: 'SSHID', keyFileVariable: 'SSH_KEY', usernameVariable: 'ubuntu')]) {
-                    sh """
-                    cd monitor
-                    sh monitor.sh
-                    """
-}
 
-                    
-                }
-            }
-        }
 
 }
         post {
