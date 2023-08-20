@@ -1,0 +1,7 @@
+version: "3"
+services:
+  webserver:
+    image: muthummkdh/nginx:v1.2
+    container_name: webserver
+    ports:
+      - "80:80"

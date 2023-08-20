@@ -1,0 +1,9 @@
+.git
+create/*
+deploy/*
+push/*
+monitor/*
+docker-compose.yml
+Jenkinsfile
+docker-compose1.yml
+.gitattributes

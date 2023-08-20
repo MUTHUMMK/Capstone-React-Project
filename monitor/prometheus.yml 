@@ -1,0 +1,27 @@
+scrape_configs:
+  - job_name: 'webserver'
+    metrics_path: /probe
+    params:
+      module: [http_2xx]
+    static_configs:
+      - targets:
+        - http://ec2:80  
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: ec2:9115  
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets:
+        - ec2:9090 
+        
+  - job_name: node
+    # If prometheus-node-exporter is installed, grab stats about the local
+    # machine by default.
+    static_configs:
+      - targets:
+        - ec2:9100

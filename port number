@@ -1,0 +1,15 @@
+Prometheus = 9090
+node_exporter = 9100
+alertmanager = 9093
+grafana-server = 3000
+blackbox_exporter = 9115
+influxdb = 8086
+
+
+.service path for prometheus.service 
+                  node_exporter.service  = /etc/systemd/system/
+
+
+.yml file path prometheus.yml = /usr/local/bin/prometheus
+
+grafana path = /etc/grafana/grafana.ini

@@ -1,0 +1,15 @@
+
+
+# dependencies These files will be generated if we try to build and test the application locally
+/node_modules
+
+/coverage
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
