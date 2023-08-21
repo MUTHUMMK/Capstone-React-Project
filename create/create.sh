@@ -13,6 +13,7 @@ b=$(aws ec2 describe-instances --region ap-south-1 --filters "Name=tag:Name,Valu
 
 echo "$a"
 echo "$b"
+echo "$ubuntu"
 
 echo "Terraform Exceute Successfully"
 
